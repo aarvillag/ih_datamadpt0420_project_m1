@@ -1,53 +1,71 @@
 # Data Project README file
 
-The README file describes the essence of the project playing the most important role. Most visitors will simply scroll down about twice on the README and leave if they are not interested. So, the README file should provide the reason **why** to checkout your project!!!). 
-Bearing that in mind, your job is to: 
-- Tell them what it is (with context).
-- Show them what it looks like in action.
-- Show them how they use it.
-- Tell them any other relevant details.
 
-![Image](https://res.cloudinary.com/springboard-images/image/upload/q_auto,f_auto,fl_lossy/wordpress/2019/05/aiexcerpt.png)
+### :raising_hand: **DATA PROJECT MODULE 1 IRONHACK 2020 JULY** 
+Here we are going to analyze information in a database with three tables related to information about people and their jobs from European countries. 
 
----
+To do that we have also connect and get information from a Eurostat API and web. With this complementary information we will get information about jobs and information about countries.
 
-## **Formatting**
-Your readers will most likely view your README in a browser so please keep that in mind when formatting its content: 
-- Use proper format when necesary (e.g.: `import pandas as pd`). 
-- Categorize content using two or three levels of header beneath. 
-- Make use of **emphasis** to call out important words. 
-- Link to project pages for related libraries you mention. Link to Wikipedia, Wiktionary, even Urban Dictionary definitions for words of which a reader may not be familiar. Make amusing cultural references. 
-- Add links to related projects or services. 
+The first challenge is to get a summary table per country about all jobs there are in the database with its percentage. You can filter per country.
 
-> Here you have a markdown cheatsheet [Link](https://commonmark.org/help/) and tutorial [Link](https://commonmark.org/help/tutorial/).
+The second challenge is to get a summary table about the answer in a survey with multichoice. 
 
-
-## **Start writing ASAP:**
-*Last but not least, by writing your README soon you give yourself some pretty significant advantages. Most importantly, you’re giving yourself a chance to think through the project without the overhead of having to change code every time you change your mind about how something should be organized or what should be included.*
-
-
-## **Suggested Structure:**
-
-### :raising_hand: **Name** 
-Self-explanatory names are best. If the name sounds too vague or unrelated, it may be a signal to move on. It also must be catchy. Images, Logo, Gif or some color is strongly recommended.
 
 ### :baby: **Status**
-Alpha, Beta, 1.1, Ironhack Data Analytics Final Project, etc... It's OK to write a sentence, too. The goal is to let interested people know where this project is at.
+Version 1.0
+
+This is the first version produced. I hope we can improve it to release future versions with more information.
+
 
 ### :running: **One-liner**
-Having a one-liner that describes the pipeline/api/app is useful for getting an idea of what your code does in slightly greater detail. 
+With “main_scrypt.py” the party starts.
+
+We have to include arguments,
+--path (-p) is required for the path+file of database
+--country (-c) is not required if you want to get the whole European countries analysis together. But if you indicate one country you will get the analysis of the country selected. Only the challenge 1 analysis consider the country selected.
+
+The result will be presented on screen, but also you will get a csv file with details in the folder ./data/
+
 
 ### :computer: **Technology stack**
-Python, Pandas, Scipy, Scikit-learn, etc. Indicate the technological nature of the software, including primary programming language(s), main libraries and whether the software is intended as standalone or as a module in a framework or other ecosystem.
+We use python language with several libraries (pandas, re, sys, argparse, datetime, os, sqlalchemy, requests)
+
+The software can be executed from a computer terminal if the folder structure is replicated. 
+
 
 ### :boom: **Core technical concepts and inspiration**
-Why does it exist? Frame your project for the potential user. Compare/contrast your project with other, similar projects so the user knows how it is different from those projects. Highlight the technical concepts that your project demonstrates or supports. Keep it very brief.
+This is the first project for IRONHACK data analysis boot camp.
+Is the first software project I have made for years. I did several in the 90’s but totally different technology.
+
+In my opinion, I have improved in my way to code.
+
+I can demonstrate that with this technology we can manage massive information and automatize its analysis.
 
 ### :wrench: **Configuration**
-Requeriments, prerequisites, dependencies, installation instructions.
+To use this software, you must replicate the folder structure to avoid problems.
+
+You have to install python 3.7 version and all libraries
+•	pandas, 
+•	re, 
+•	sys, 
+•	argparse, 
+•	datetime, 
+•	os, 
+•	sqlalchemy, 
+•	requests
 
 ### :see_no_evil: **Usage**
-Parameters, return values, known issues, thrown errors.
+With “main_scrypt.py” the party starts.
+
+We have to include arguments,
+--path (-p) is required for the path+file of database. If the path or file doesn’t exist the program end with the error.
+--country (-c) is not required if you want to get the whole European countries analysis together. But if you indicate one country you will get the analysis of the country selected. 
+If the country indicated is not found in the database the program end with an error.
+Only the challenge 1 analysis consider the country selected.
+
+Output.
+
+You will get the information on the screen of terminal and also some csv files in the folder ./data/
 
 ### :file_folder: **Folder structure**
 ```
@@ -59,11 +77,13 @@ Parameters, return values, known issues, thrown errors.
     ├── README.md
     ├── main_script.py
     ├── notebooks
-    │   ├── notebook1.ipynb
-    │   └── notebook2.ipynb
-    ├── package1
-    │   ├── module1.py
-    │   └── module2.py
+    │   └── my_notebook.ipynb
+    ├── p_acquisition
+    │   └── m_acquisition.py
+    ├── p_wrangling
+    │   └── m_wrangling.py
+    ├── p_analysis
+    │   └── m_analysis.py
     └── data
         ├── raw
         ├── processed
@@ -73,27 +93,15 @@ Parameters, return values, known issues, thrown errors.
 > Do not forget to include `__trash__` and `.env` in `.gitignore` 
 
 ### :shit: **ToDo**
-Next steps, features planned, known bugs (shortlist).
+Next step will be finalizing challenge 3
 
 ### :information_source: **Further info**
-Credits, alternatives, references, license.
+
 
 ### :love_letter: **Contact info**
+Agustin Arvilla (aarvillag@gmail.com)
 Getting help, getting involved, hire me please.
 
 ---
 
-> Here you have some repo examples:
-- [Mamba (OCR-Translator-Assistant)](https://github.com/YonatanRA/OCR-translator-assistant-project)
-- [Art Classification](https://github.com/serguma/art_classification)
-- [OSNet-IBN (width x 1.0) Lite](https://github.com/RodMech/OSNet-IBN1-Lite)
-- [Movie Founder](https://github.com/Alfagu/final-project-Ironhack-0419mad)
-- [Convolutional Neural Network to detect Pneumonia](https://github.com/jmolins89/final-project)
-- [Brain tumor detection project](https://github.com/alonsopdani/brain-tumor-detection-project)
-- [Policy-Gradient-Methods](https://github.com/cyoon1729/Policy-Gradient-Methods)
-
-> Here you have some tools and references:
-- [Make a README](https://www.makeareadme.com/)
-- [Awesome README](https://github.com/matiassingers/awesome-readme)
-- [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
 
