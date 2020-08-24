@@ -8,7 +8,7 @@ To do that we have also connect and get information from a Eurostat API and web.
 
 The first challenge is to get a summary table per country about all jobs there are in the database with its percentage. You can filter per country.
 
-The second challenge is to get a summary table about the answer in a survey with multichoice. 
+The second challenge is to get a summary table about answers in a survey with multichoice. 
 
 
 ### :baby: **Status**
